@@ -1,21 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
-	var color string
-	fmt.Print("Masukkan Warna Lampu lalu lintas: ")
-	fmt.Scanln(&color)
+	nama := "andika"
+	animals := "kucing, anjing, burung"
+	filter := strings.Split(animals, ",")
+	cihuy := "          hello world           "
+	filterCihuy := strings.TrimSpace(cihuy)
 
-	switch color {
-	case "red":
-		fmt.Println("Lampu Merah: Berhenti")
-	case "yellow":
-		fmt.Println("Lampu Kuning: Hati-hati")
-	case "green":
-		fmt.Println("Lampu Hijau: Jalan")
-	default:
-		fmt.Println("Warna lampu tidak valid")
-	}
-	
+	fmt.Println(strings.ToUpper(nama))
+	fmt.Println(strings.ToLower(nama))
+	fmt.Println(strings.Contains(animals, "kucing"))
+	fmt.Println(animals)
+	fmt.Println(strings.ReplaceAll(animals, "kucing", "harimau"))
+	fmt.Println(filter)
+	fmt.Println(filterCihuy)
 }
